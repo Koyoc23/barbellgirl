@@ -1,0 +1,37 @@
+/* =========================================
+   ESTILOS DEL BOTÓN CIRCULAR DE WHATSAPP
+   ========================================= */
+
+.whatsapp-button {
+    margin-top: 15px;
+    margin-left: auto;
+    /* Empuja el botón hacia la derecha */
+    width: 50px;
+    /* Tamaño fijo para hacerlo circular */
+    height: 50px;
+    border-radius: 50%;
+    /* Hace que el botón sea un círculo perfecto */
+    background-color: #ffffff;
+    /* Fondo blanco premium */
+    color: #000000;
+    /* Icono negro por defecto */
+    border: none;
+    padding: 0;
+    /* Eliminamos el padding para centrar bien el icono */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+    /* Centrado perfecto del icono dentro del círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-button:hover {
+    background-color: #25D366;
+    /* Verde WhatsApp en Hover */
+    color: #ffffff;
+    /* Icono blanco en Hover */
+    transform: scale(1.05);
+    /* Pequeño efecto de pulsación al pasar el mouse */
+}

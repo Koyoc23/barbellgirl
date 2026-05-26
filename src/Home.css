@@ -1,0 +1,88 @@
+/* src/App.css */
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Un fondo oscuro para que resalte el espacio vacío alrededor de las imágenes */
+  background-color: #0a0a0a;
+}
+
+.container {
+  width: 100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Contenedor principal que define el "borde azul" */
+.main-content {
+  width: 90%;
+  /* Deja un pequeño margen lateral en la pantalla */
+  max-width: 1200px;
+  /* Este será el límite máximo de tu borde azul */
+  margin: 0 auto;
+  /* Centra perfectamente el contenedor en la pantalla */
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  gap: 60px;
+}
+
+/* La imagen que ahora respetará los límites */
+.heroSection {
+  width: 100%;
+  /* LA CLAVE: 100% hace que llegue justo al borde del padre sin salirse */
+  height: 80vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.title {
+  position: relative;
+  color: white;
+  font-size: 6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 2;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .heroSection {
+    width: 92vw;
+    /* En celulares reducimos el margen para aprovechar mejor el espacio */
+    height: 70vh;
+  }
+}
