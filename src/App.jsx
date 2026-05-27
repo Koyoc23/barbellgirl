@@ -1,4 +1,6 @@
 // src/App.jsx
+// Al principio del archivo se agrega la importación de tus datos
+import { products } from './data';
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
@@ -13,6 +15,7 @@ export default function App() {
           El 'fallback' es lo que se muestra mientras la página descarga en milisegundos */}
       <Suspense fallback={<div style={{ color: 'white', textAlign: 'center', marginTop: '100px' }}>Cargando catálogo...</div>}>
         <Routes>
+          <Route path="/marca/:brandId" element={<BrandPage productos={products} />} />
           <Route path="/" element={<Home />} />
           <Route path="/marca/:brandId" element={<BrandPage />} />
         </Routes>

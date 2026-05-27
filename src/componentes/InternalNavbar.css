@@ -1,61 +1,41 @@
 /* src/components/InternalNavbar.css */
-
 .internal-navbar {
     position: fixed;
+    /* La fijamos arriba */
     top: 0;
     left: 0;
     width: 100%;
     height: 70px;
-    background-color: #000000;
+    /* Altura definida */
+    background-color: #000;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
-    /* Le damos 60px a la derecha para alejarlo del scrollbar y 40px a la izquierda */
-    padding: 0 60px 0 40px;
-
-    /* ESTA ES LA MAGIA: Obliga al navegador a meter el padding dentro del 100% */
-    box-sizing: border-box;
-
     z-index: 1000;
-    border-bottom: 1px solid #1a1a1a;
+    /* Siempre por encima de todo */
+    border-bottom: 1px solid #333;
 }
 
-.internal-logo {
-    color: white;
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    /* BarbellGirl a la izquierda, Marca a la derecha */
+    align-items: center;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    color: #fff;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-/* Reemplaza tu clase actual con esta: */
-.internal-brand {
-    color: white;
-    font-size: 0.95rem;
-    /* Reducimos el tamaño (antes estaba en 1.2rem) */
-    font-weight: 500;
-    /* Un poco menos grueso para que se vea más elegante */
-    letter-spacing: 1.5px;
-    white-space: nowrap;
-    /* Evita que el texto se rompa o se comporte raro */
-}
-
-/* =========================================
-   Ajuste para celulares (pon esto hasta abajo del archivo)
-   ========================================= */
-@media (max-width: 768px) {
-    .internal-navbar {
-        padding: 0 20px;
-        /* Le damos más espacio al texto reduciendo los bordes */
-    }
-
-    .internal-logo {
-        font-size: 1.2rem;
-        /* Logo un pelín más pequeño en móvil */
-    }
-
-    .internal-brand {
-        font-size: 0.85rem;
-        /* Marca aún más pequeña para que encaje perfecto */
-    }
+.nav-brand-name {
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
 }
